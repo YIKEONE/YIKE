@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"d95d62b0f849dcd9","type":"text","text":"OHOS","x":456,"y":-260,"width":250,"height":60},
+		{"id":"6ab12b0c93f03868","type":"text","text":"ace","x":456,"y":-140,"width":250,"height":60},
+		{"id":"b026f70a2f01ea52","type":"text","text":"Referenced","x":706,"y":40,"width":250,"height":60},
+		{"id":"539e7bb28341e814","type":"text","text":"AceType","x":456,"y":240,"width":250,"height":60},
+		{"id":"bef2bfe74626dc8b","type":"text","text":"TypeInfoBase","x":240,"y":40,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"c864dffd3a0f5cb2","fromNode":"d95d62b0f849dcd9","fromSide":"bottom","toNode":"6ab12b0c93f03868","toSide":"top"},
+		{"id":"c8536f96d1700119","fromNode":"6ab12b0c93f03868","fromSide":"bottom","toNode":"bef2bfe74626dc8b","toSide":"top"},
+		{"id":"7ef689fd15907362","fromNode":"6ab12b0c93f03868","fromSide":"bottom","toNode":"b026f70a2f01ea52","toSide":"top"},
+		{"id":"ef28262f52799997","fromNode":"bef2bfe74626dc8b","fromSide":"bottom","toNode":"539e7bb28341e814","toSide":"top"},
+		{"id":"15d69bebc0a07b57","fromNode":"b026f70a2f01ea52","fromSide":"bottom","toNode":"539e7bb28341e814","toSide":"top"}
+	]
+}

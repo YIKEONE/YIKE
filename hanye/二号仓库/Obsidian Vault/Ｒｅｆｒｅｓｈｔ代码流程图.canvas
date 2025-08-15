@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"49f22f16d2df89ec","type":"text","text":"js_Refresh--bind()两个接口","x":-5200,"y":-1610,"width":250,"height":170},
+		{"id":"c98830cf16e3b802","type":"text","text":"pullToRefresh","x":-4760,"y":-1640,"width":250,"height":60},
+		{"id":"fc15250f566e9fe6","type":"text","text":"refresh_model:SetRefreshOffset,SetPullToRefresh","x":-4380,"y":-1555,"width":250,"height":60},
+		{"id":"6fcbd1a9b1094865","type":"text","text":"refresh_model_ng:\nACE_UPDATE_LAYOUT_PROPERTY(RefreshLayoutProp\nerty, RefreshOffset, offset);\nACE_UPDATE_NODE_LAYOUT_PROPERTY(RefreshLayoutProperty, PullToRefresh, pullToRefresh, frameNode);","x":-4060,"y":-1280,"width":320,"height":220},
+		{"id":"5067c84b6d8bca36","type":"text","text":"refreshOffset","x":-4760,"y":-1495,"width":250,"height":60},
+		{"id":"834964cf62fe332c","type":"text","text":"ｒｅｆｒｅｓｈ＿ｐａｔｔｅｒｎ．ｃｐｐ","x":-2880,"y":-1200,"width":250,"height":60,"color":"1"},
+		{"id":"6907e74be9643b7b","type":"text","text":"ｐｒｏｐｅｒｔｙ：拼接获得：\nGetRefreshOffset　","x":-3160,"y":-1224,"width":200,"height":109,"color":"1"},
+		{"id":"1fd068fd6e959e10","type":"text","text":"RefreshLayoutProp:refresh_layout_property\nerty.cpp 两个宏\n- ACE_DEFINE_PROPERTY_ITEM_WITHOUT_GROUP(RefreshOffset, Dimension, PROPERTY_UPDATE_LAYOUT);\n-ACE_DEFINE_PROPERTY_ITEM_WITHOUT_GROUP(PullDownRatio, float, PROPERTY_UPDATE_LAYOUT);","x":-3620,"y":-1280,"width":391,"height":239},
+		{"id":"1b18de1d7c99278c","type":"text","text":"- 如果 `GetRefreshOffset()` 返回的偏移距离大于等于0（也就是说，它是一个有效的值），则使用这个偏移距离。\n- 如果 `GetRefreshOffset()` 返回的偏移距离小于0（无效值），则使用 `GetTriggerRefreshDisTance()` 方法返回的距离作为触发刷新的距离。\n- 然后，代码会检查 `GetPullToRefresh()` 的结果来确定是否启用下拉刷新功能。","x":-2500,"y":-1344,"width":567,"height":349},
+		{"id":"b12222f35cd7bb52","x":-1820,"y":-1200,"width":250,"height":60,"type":"text","text":"RefreshStatusChangeEffect()"}
+	],
+	"edges":[
+		{"id":"6e200b7cb129e58e","fromNode":"49f22f16d2df89ec","fromSide":"right","toNode":"5067c84b6d8bca36","toSide":"left"},
+		{"id":"4c3b6301cf34e43f","fromNode":"5067c84b6d8bca36","fromSide":"right","toNode":"fc15250f566e9fe6","toSide":"left"},
+		{"id":"0f94f2576da279c7","fromNode":"49f22f16d2df89ec","fromSide":"right","toNode":"c98830cf16e3b802","toSide":"left"},
+		{"id":"ebf21687a630d258","fromNode":"c98830cf16e3b802","fromSide":"right","toNode":"fc15250f566e9fe6","toSide":"left"},
+		{"id":"328f19d59d65f0ee","fromNode":"fc15250f566e9fe6","fromSide":"right","toNode":"6fcbd1a9b1094865","toSide":"left"},
+		{"id":"ef44e299818d2ffd","fromNode":"6fcbd1a9b1094865","fromSide":"right","toNode":"1fd068fd6e959e10","toSide":"left"},
+		{"id":"a14b8f224114cdcb","fromNode":"1fd068fd6e959e10","fromSide":"right","toNode":"6907e74be9643b7b","toSide":"left"},
+		{"id":"a7afad49d3d33f1b","fromNode":"6907e74be9643b7b","fromSide":"right","toNode":"834964cf62fe332c","toSide":"left"},
+		{"id":"fef14da0b88997bb","fromNode":"834964cf62fe332c","fromSide":"right","toNode":"1b18de1d7c99278c","toSide":"left"},
+		{"id":"21775f9759c310e7","fromNode":"1b18de1d7c99278c","fromSide":"right","toNode":"b12222f35cd7bb52","toSide":"left"}
+	]
+}

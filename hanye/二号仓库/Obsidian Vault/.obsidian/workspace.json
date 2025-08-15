@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "3c13e8f2ef0b7004",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f3bec6e08568ae1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f71f31f7e727487b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OpenHarmony/调试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bc480e478ef1ffd",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20240703164744.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0fc25f7765e5434f",
+    "type": "split",
+    "children": [
+      {
+        "id": "ccb21bb7d4436cfd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d4611483cbb7d6a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2bf2f4e92210a13c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "51986c9a58186c4d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 247.5
+  },
+  "right": {
+    "id": "d598a05f9c49fe67",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee18329322ad0f29",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79302dc6b0bb841d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "OpenHarmony/调试.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9461406251f92a78",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "OpenHarmony/调试.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "97f6e557d1fc881c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "570f214907679e82",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "OpenHarmony/调试.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "f71f31f7e727487b",
+  "lastOpenFiles": [
+    "OpenHarmony/1.总纲.md",
+    "OpenHarmony/编译.md",
+    "OpenHarmony/代码管理.md",
+    "板子编译环境搭建/问题及解决办法/编译sdk报错：.md",
+    "板子编译环境搭建/问题及解决办法/解决冲突：.md",
+    "板子编译环境搭建/问题及解决办法/解决冲突m.md",
+    "板子编译环境搭建/问题及解决办法/拉了两套代码内存不够如何解决.md",
+    "板子编译环境搭建/问题及解决办法/解决wsl网络不能连接的问题：.md",
+    "板子编译环境搭建/问题及解决办法/提交tdd的PR遇到的问题及流程.md",
+    "板子编译环境搭建/问题及解决办法/提取tag.gz文件夹方式：.md",
+    "板子编译环境搭建/问题及解决办法/问题及解决方式：.md",
+    "板子编译环境搭建/问题及解决办法/板子crash.md",
+    "板子编译环境搭建/问题及解决办法/c++语言编程规范.md",
+    "需求/更改适配modifier.md",
+    "未命名 1.canvas",
+    "Pasted image 20240703164744.png",
+    "板子编译环境搭建/提交pr流程.md",
+    "板子编译环境搭建/添加接口流程2024.4.28.md",
+    "板子编译环境搭建/基本指令.md",
+    "板子编译环境搭建/板子搭建环境.md",
+    "需求/提交pr并自测的流程 第二版.md",
+    "板子编译环境搭建/问题及解决办法/deveco出现bug.md",
+    "Pasted image 20240812105844.png",
+    "Pasted image 20240730095810.png",
+    "板子编译环境搭建/问题及解决办法/校验本地镜像是否有问题.md",
+    "板子编译环境搭建/真机测试代码流程+另一种快速真机编译代码.md",
+    "需求/新需求 0703 bindMenu 和bindContextMenu组件支持无障碍屏幕朗读 SR20240607814784.md",
+    "需求/bindmenu业务代码修改.md",
+    "需求/colorfilterDoc.md",
+    "ArkUI组件开发/ArkUI组件开发.md",
+    "需求/未命名.canvas",
+    "Pasted image 20240923153107.png",
+    "Pasted image 20240516142808.png",
+    "Pasted image 20240823154355.png",
+    "Pasted image 20240817163306.png",
+    "Pasted image 20240816205220.png",
+    "Pasted image 20240816192231.png",
+    "Pasted image 20240814095317.png",
+    "未命名.canvas",
+    "解决冲突.pdf",
+    "builder 程序思维导图.canvas",
+    "a串讲和while死循环逻辑.canvas",
+    "无障碍.canvas",
+    "Ｒｅｆｒｅｓｈｔ代码流程图.canvas",
+    "rk3568环境搭建(1).pdf",
+    "Swiper.canvas",
+    "inspectorid.canvas",
+    "ArkUI组件开发",
+    "查看板子crashlog的操作",
+    "需求",
+    "弧形文本导航点",
+    "板子编译环境搭建",
+    "板子编译环境搭建/pr对别截图，无真机编译",
+    "添加接口流程",
+    "X"
+  ]
+}

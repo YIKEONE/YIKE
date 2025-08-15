@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"d9cb061b8fcb4660","x":-371,"y":-360,"width":250,"height":60,"type":"text","text":"JSSearch::SetId"},
+		{"id":"1d8f3268742a1f28","x":-481,"y":-260,"width":471,"height":50,"type":"text","text":"SearchModel::GetInstance()->UpdateInspectorId(id);"},
+		{"id":"bfc6df83ddfd2d1e","x":-410,"y":-160,"width":329,"height":50,"type":"text","text":"SearchModelNG::UpdateInspectorId"},
+		{"id":"21b3cfdefbae4323","x":-550,"y":-80,"width":610,"height":60,"type":"text","text":"UpdateInnerInspector(FrameNode* frameNode, const std::string& key)"}
+	],
+	"edges":[]
+}

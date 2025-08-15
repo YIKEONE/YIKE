@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"c8f8a092f40b4555","type":"text","text":"bindMenu/bindContextMenu组件","x":-433,"y":-160,"width":317,"height":50},
+		{"id":"887923a7fc758717","type":"text","text":"无障碍朗读读的是什么？text 那就要找到Text","x":-483,"y":-60,"width":417,"height":50},
+		{"id":"b8a94e20c6e24f45","type":"text","text":"然后无障碍朗读的方法","x":-398,"y":40,"width":248,"height":50},
+		{"id":"ee827d0a39d57046","type":"text","text":"合并的方法","x":-358,"y":140,"width":167,"height":50},
+		{"id":"0a770d2d91e6764e","type":"text","text":"JSClass<JSViewAbstract>::StaticMethod(\"accessibilityText\", &JSViewAbstract::JsAccessibilityText);","x":-1065,"y":-420,"width":745,"height":110},
+		{"id":"2d6a4a6686bde1e3","type":"text","text":"JSViewAbstract::JSBind","x":-860,"y":-500,"width":237,"height":50},
+		{"id":"2e31763a78a5a9bc","type":"text","text":" ViewAbstractModelNG::SetAccessibilityText","x":-932,"y":-340,"width":381,"height":60},
+		{"id":"f19d4659f4aeafc0","type":"text","text":"","x":-787,"y":-238,"width":250,"height":60},
+		{"id":"133c466b954f0ace","type":"text","text":"首先了解什么是无障碍：通过无障碍文本来告诉accessibilityText(value: string)","x":-455,"y":-280,"width":363,"height":82}
+	],
+	"edges":[
+		{"id":"9b1442a34edd18d2","fromNode":"133c466b954f0ace","fromSide":"bottom","toNode":"c8f8a092f40b4555","toSide":"top"},
+		{"id":"043ef38ea174e203","fromNode":"c8f8a092f40b4555","fromSide":"bottom","toNode":"887923a7fc758717","toSide":"top"},
+		{"id":"143e16733af43aa6","fromNode":"887923a7fc758717","fromSide":"bottom","toNode":"b8a94e20c6e24f45","toSide":"top"},
+		{"id":"d067c97ae253bd2b","fromNode":"b8a94e20c6e24f45","fromSide":"bottom","toNode":"ee827d0a39d57046","toSide":"top"}
+	]
+}

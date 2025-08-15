@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "f759e3e1e12f603f",
+    "type": "split",
+    "children": [
+      {
+        "id": "29a911571a34da09",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5bab0540b88b1e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "环境搭建/环境搭建.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4f1dd052d5ea747",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OpenHarmony/框架.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "67f7cc56ab3e72ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OpenHarmony/框架.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7c92d3d3d7524568",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "环境搭建/编译代码及测试环境搭建.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "36251cfebd86962b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "环境搭建/快速编译命令（真机shell）.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fcce8de9f591a381",
+    "type": "split",
+    "children": [
+      {
+        "id": "47e6cbf955a2a6e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9698675f7952423",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4710a3478893c8ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#下载REPO",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e737edbcf3b25aa3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 347.5
+  },
+  "right": {
+    "id": "d82a7f99c274dcd4",
+    "type": "split",
+    "children": [
+      {
+        "id": "c253d0b0ca77052a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd16b0b53c2b4f84",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "环境搭建/环境搭建.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "a53236efd29a4dd5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1c1fad3ba715893b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "环境搭建/环境搭建.md"
+              }
+            }
+          },
+          {
+            "id": "eaade5500088c4e7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "环境搭建/环境搭建.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "graph:查看关系图谱": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "b5bab0540b88b1e4",
+  "lastOpenFiles": [
+    "环境搭建/编译代码及测试环境搭建.md",
+    "环境搭建/环境搭建.md",
+    "环境搭建/快速编译命令（真机shell）.md",
+    "环境搭建/git命令.md",
+    "OpenHarmony/框架.md",
+    "未命名 5.canvas",
+    "2025-04-21.md",
+    "未命名 4.canvas",
+    "LOG打印/LOG.md",
+    "学习/NDK          N_API.md",
+    "ark UI架构/Ark ui 运行流程.canvas",
+    "备忘录/未命名.md",
+    "需求文档/导航点.canvas",
+    "C++/完美转发.md",
+    "C++/共享指针.md",
+    "C++/数学&程序.md",
+    "C++/内存顺序(Memory Order).md",
+    "Pasted image 20240522155300.png",
+    "Pasted image 20240522160307.png",
+    "Pasted image 20240522155610.png",
+    "Pasted image 20240522163251.png",
+    "Pasted image 20240522163451.png",
+    "计划.md",
+    "备忘录",
+    "OpenHarmony/问题单发送邮件.md",
+    "未命名.md",
+    "python/语法.md",
+    "python",
+    "板子搭建/搭建.md",
+    "C++/git 命令.md",
+    "未命名/未命名.md",
+    "OpenHarmony/TDD.md",
+    "Pasted image 20240521163125.png",
+    "Pasted image 20240521160819.png",
+    "Pasted image 20240521160520.png",
+    "Pasted image 20240521145658.png",
+    "Pasted image 20240521144654.png",
+    "C++/解冲突：.md",
+    "ark UI架构/ArkUI架构分解（old）.md",
+    "C++/for_each.md",
+    "需求文件/需求处理.md",
+    "需求文件/第二个需求.canvas",
+    "未命名 3.canvas",
+    "未命名",
+    "LOG打印",
+    "C++/Log打印",
+    "需求文件/图谱.canvas",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "OpenHarmony/attachments",
+    "OpenHarmony",
+    "C++",
+    "学习",
+    "需求文件",
+    "未命名.canvas"
+  ]
+}

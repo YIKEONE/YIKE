@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"ccfb6713750275c2","type":"text","text":"FrameNode 处理UI组件属性更新、布局测算、事件处理等业务逻辑","x":-127,"y":-20,"width":327,"height":100},
+		{"id":"d8a68fd6b2c0289f","x":-460,"y":0,"width":290,"height":60,"type":"text","text":"SyntaxNode类似LazyForEach"},
+		{"id":"8891fb4a7c33a6ba","x":260,"y":-10,"width":300,"height":80,"type":"text","text":"CustomNode处理自定义组件相关业务逻辑，比如执行build函数"},
+		{"id":"39148b49d16c9a9e","x":-97,"y":-160,"width":268,"height":80,"type":"text","text":"UINode后端基于前端UI描述创建相应的UINode节点树"}
+	],
+	"edges":[]
+}

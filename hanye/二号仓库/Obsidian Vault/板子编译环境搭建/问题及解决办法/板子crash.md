@@ -1,0 +1,13 @@
+Stacktrace:
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at applyPeer (==/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:5784==:5784)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at applyStage (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:151:151)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at anonymous (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:2842:2842)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at applyModifierPatch (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:2841:2841)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at attributeModifierFunc (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:4188:4188)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at anonymous (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/arkComponent.js:6880:6880)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at anonymous (entry/src/main/ets/pages/Index.ets:91:11)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at updateFunc (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/stateMgmt.js:6607:6607)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at observeComponentCreation2 (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/stateMgmt.js:6646:6646)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at initialRender (entry/src/main/ets/pages/Index.ets:101:20)
+08-05 23:11:23.783   13088-13088  C01317/AAFwkAppKit             pid-13088             E      at initialRenderView (/home/zby/zwork/foundation/arkui/ace_engine/frameworks/bridge/declarative_frontend/engine/stateMgmt.js:6272:6272)
+08-05 23:11:23.784   689-943      C01337/AAFwkAbilityMgr         foundation            E  [app_exit_reason_helper.cpp(RecordAppExitReason:64)]Record Process Extension Exit Reason failed.code: 2097247

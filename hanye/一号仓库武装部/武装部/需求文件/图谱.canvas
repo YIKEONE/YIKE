@@ -1,0 +1,30 @@
+{
+	"nodes":[
+		{"id":"d4f45d0b374574a3","type":"text","text":"","x":-512,"y":1314,"width":250,"height":60},
+		{"id":"a70deb34a5e21f53","type":"text","text":"SearchModelImpl::SetSearchButton()","x":-655,"y":242,"width":327,"height":65},
+		{"id":"7b1f0095c07096fc","type":"text","text":"struct SearchAttribute.    searchText","x":-655,"y":402,"width":322,"height":60},
+		{"id":"9b5a1eda8ebec6a1","type":"text","text":"RenderSearch::CreateRenderButton()","x":-660,"y":605,"width":327,"height":62},
+		{"id":"6ff6e92bf4cbeb59","type":"text","text":"SearchLayoutProperty","x":296,"y":407,"width":250,"height":60},
+		{"id":"26efc8e8fc10ba36","type":"text","text":"SearchPattern::OnModifyDone()","x":266,"y":607,"width":310,"height":60},
+		{"id":"2b3ac9e1bbfff8c1","type":"text","text":"SearchModelNG::SetSearchButton()","x":260,"y":249,"width":322,"height":58},
+		{"id":"40b242b4f3b273c5","type":"text","text":"TextLayoutProperty","x":-1055,"y":407,"width":250,"height":60},
+		{"id":"2617243739aad5ae","type":"text","text":"123","x":-1055,"y":605,"width":250,"height":60},
+		{"id":"13342dd2f3fa881e","type":"text","text":"JSSearch::JSBind（）","x":-162,"y":-260,"width":250,"height":60},
+		{"id":"0d298f4d0edaf578","type":"text","text":"JSSearch::SetSearchButton（）","x":-182,"y":-140,"width":290,"height":60},
+		{"id":"f1383b395ca8ee1b","type":"text","text":"SearchModelNG::SetSearchButton(const std::string& text)   虚函数","x":-240,"y":-40,"width":406,"height":58},
+		{"id":"0a400f21725aba71","type":"text","text":" JSText::JSBind(SetTextCase","x":-1107,"y":18,"width":355,"height":102},
+		{"id":"14f97894eaf14805","type":"text","text":"TextStyle.h 枚举TextCase","x":-1357,"y":407,"width":250,"height":228}
+	],
+	"edges":[
+		{"id":"57accd9611675e16","fromNode":"13342dd2f3fa881e","fromSide":"bottom","toNode":"0d298f4d0edaf578","toSide":"top"},
+		{"id":"184046d574131e62","fromNode":"0d298f4d0edaf578","fromSide":"bottom","toNode":"f1383b395ca8ee1b","toSide":"top"},
+		{"id":"bb208935d98a3d67","fromNode":"6ff6e92bf4cbeb59","fromSide":"bottom","toNode":"26efc8e8fc10ba36","toSide":"top","label":"GetSearchButtonValue()\n"},
+		{"id":"136c22069c096b34","fromNode":"a70deb34a5e21f53","fromSide":"bottom","toNode":"7b1f0095c07096fc","toSide":"top","label":"SearchComponent::SetSearchText"},
+		{"id":"9266263eadf882c4","fromNode":"f1383b395ca8ee1b","fromSide":"bottom","toNode":"a70deb34a5e21f53","toSide":"right"},
+		{"id":"62ba75bd66a7aeb9","fromNode":"2b3ac9e1bbfff8c1","fromSide":"bottom","toNode":"6ff6e92bf4cbeb59","toSide":"top","label":"UpdateSearchButton(value)"},
+		{"id":"8d4c1a64be484c41","fromNode":"f1383b395ca8ee1b","fromSide":"bottom","toNode":"2b3ac9e1bbfff8c1","toSide":"left"},
+		{"id":"8221dfb368cc108d","fromNode":"7b1f0095c07096fc","fromSide":"bottom","toNode":"9b5a1eda8ebec6a1","toSide":"top","label":"SearchComponent::GetSearchText()"},
+		{"id":"1b9a6db0121aeac1","fromNode":"40b242b4f3b273c5","fromSide":"bottom","toNode":"2617243739aad5ae","toSide":"top","label":"GetTextCase（）"},
+		{"id":"d4b18a971cd644dc","fromNode":"0a400f21725aba71","fromSide":"bottom","toNode":"40b242b4f3b273c5","toSide":"top","label":"SetTextCase()"}
+	]
+}

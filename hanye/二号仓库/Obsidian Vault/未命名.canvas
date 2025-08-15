@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"1808bb493c10a1d3","x":-220,"y":-460,"width":332,"height":50,"type":"text","text":"MenuPattern::RegisterOnTouch()"},
+		{"id":"6257fc0d06273e15","x":-197,"y":-380,"width":286,"height":60,"type":"text","text":"MenuPattern::OnTouchEvent"},
+		{"id":"8d16f2510cc5f507","x":-179,"y":-280,"width":250,"height":60,"type":"text","text":""}
+	],
+	"edges":[]
+}
