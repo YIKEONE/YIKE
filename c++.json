@@ -1,0 +1,192 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	// for loop
+	"For loop with index": {
+        "prefix": "fori",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:length}; ++${1:i}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "For loop with index"
+    }
+
+	// for loop reverse
+	"For loop with index reverse": {
+        "prefix": "forir",
+        "body": [
+            "for (int ${1:i} = ${2:length}.size() - 1; ${1:i} >= 0; --${1:i}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "For loop with index reverse"
+    }
+	
+	// for range
+	"Range-based for loop": {
+		"prefix": "forr",
+		"body": [
+			"for ($1auto &${2:element} : ${3:container}) {",
+			"\t$4",
+			"}"
+		],
+		"description": "A range-based for loop"
+	}
+
+	// for iterator
+	"For Loop with Iterator": {
+		"prefix": "forit",
+		"body": [
+			"for (auto it = ${1:container}.begin(); it != ${1:container}.end(); ${2:++it}) {",
+			"\t${3:// code}",
+			"}"
+		],
+		"description": "Traditional iterator-based for loop"
+	}
+	
+	// while
+	"Basic While Loop": {
+    "prefix": "while",
+    "body": [
+        "while (${1:condition}) {",
+        "\t${2:}",
+        "}",
+		],
+		"description": "Basic while loop structure with condition and counter update"
+	}
+
+	// do while
+	"Basic do While Loop": {
+		"prefix": "dow",
+		"body": [
+			"do {"
+			"\t${2:}",
+			"} while (${1:condition}) {",
+			],
+			"description": "Basic do while loop"
+		}
+
+	// if
+	"If Statement": {
+		"prefix": "if",
+		"body": [
+			"if (${1:condition}) {",
+			"\t$2",
+			"}"
+		],
+		"description": "An if statement"
+	}
+
+	// if-else
+	"If-Else Statement": {
+		"prefix": "ife",
+		"body": [
+			"if (${1:condition}) {",
+			"\t$2",
+			"} else {",
+			"\t$3",
+			"}"
+		],
+		"description": "An if-else statement"
+	}
+
+	// func template
+	"Function Template": {
+		"prefix": "funct",
+		"body": [
+			"${1:return_type} ${2:function_name}(${3:params})",
+			"{",
+			"\t$4",
+			"}"
+		],
+		"description": "A function template"
+	}
+
+	// lambda
+	"Lambda Expression": {
+		"prefix": "lam",
+		"body": [
+			"[${1:captures}](${2:params}) -> ${3:return_type} {",
+			"\t$4",
+			"};"
+		],
+		"description": "A lambda expression"
+	}
+
+	// smart ptr
+	"Smart Pointer (unique_ptr)": {
+		"prefix": "uniq",
+		"body": [
+			"std::unique_ptr<${1:type}> ${2:ptr}(new ${1:type}(${3}));",
+			"$0"
+		],
+		"description": "A smart pointer using unique_ptr"
+	},
+	"Smart Pointer (shared_ptr)": {
+		"prefix": "shrd",
+		"body": [
+			"std::shared_ptr<${1:type}> ${2:ptr} = std::make_shared<${1:type}>(${3});",
+			"$0"
+		],
+		"description": "A smart pointer using shared_ptr"
+	}
+
+	// try-catch
+	"Try-Catch Block": {
+		"prefix": "tryc",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch(const std::exception& e) {",
+			"\tstd::cerr << e.what() << std::endl;",
+			"\t$2",
+			"}"
+		],
+		"description": "A try-catch block for exception handling"
+	}
+
+	// cout
+	"Cout Block": {
+		"prefix": "coutt",
+		"body": [
+			"std::cout << $1 << std::endl;",
+		],
+		"description": "A cout block for C++ Standard Library"
+	}
+
+	"Sort Algorithm": {
+		"prefix": "sort",
+		"body": [
+			"std::sort(${1:begin}, ${2:end}${3:, comparator});",
+			"$0"
+		],
+		"description": "Using the sort algorithm from the C++ Standard Library"
+	}
+
+	"switch statement": {
+        "prefix": "switch",
+        "body": [
+            "switch ($1) {",
+            "\tcase $2:",
+            "\t\t$3",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t$4",
+            "}"
+        ],
+        "description": "Generate a switch statement"
+    }
+}

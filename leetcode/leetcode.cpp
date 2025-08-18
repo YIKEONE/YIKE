@@ -1338,7 +1338,7 @@ public:
             return 1.0;
         }
         double y = quickMul(x, n / 2);
-        return n % 2 == 0 ? y * y : y * y *x;
+        return n % 2 == 0 ? y * y : y * y * x;
     }
 
     double myPow(double x, int n) {
@@ -1371,32 +1371,78 @@ public:
     }
 };
 
-// /*
-// 67. 二进制求和
-// 给你两个二进制字符串 a 和 b ，以二进制字符串的形式返回它们的和。
-// */
-// class Solution67 {
-// public:
-//     char addBinaryChar(char a, char b, bool &carry) {
+/*
+6. Z 字形变换
+将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。
 
-//         if (carry) {
-//         //    auto num = (std::fabs(a - b) + carry) % 2;
-//         }
-//         return ' ';
-//     }
+比如输入字符串为 "PAYPALISHIRING" 行数为 3 时，排列如下：
 
-//     std::string addBinary(std::string a, std::string b) {
-//         std::string ans = a.size() > b.size() ? a : b;
+P   A   H   N
+A P L S I I G
+Y   I   R
+之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："PAHNAPLSIIGYIR"。
 
-//         int pa = a.size() - 1, pb = b.size() - 1;
-//         bool carry = false;
-//         while (pa >= 0 && pb >= 0) {
-//             ans.push_back(addBinaryChar(a[pa], b[pb], carry));
-//         }
-//         std::reverse(ans.begin(), ans.end());
-//         return ans;
-//     }
-// };
+请你实现这个将字符串进行指定行数变换的函数：
+
+string convert(string s, int numRows);
+math conclusion: head and tail: xi += 2n. midRow: xi += 2(n - row) -> xi += 2row (cycle)
+步长交互使用标志位取反
+*/
+class Solution6 {
+public:
+    std::string convert(std::string s, int numRows) {
+        if (s.size() <= numRows || numRows == 1) {
+            return s;
+        }
+        int index = 0;
+        int cycle = 2 * (numRows - 1);
+        std::string ans;
+        for (int i = 0; i < numRows; ++i) {
+            index = i;
+            bool isMidRow = i > 0 && i < numRows - 1;
+            int step1 = 2 * (numRows - 1 - i);
+            int step2 = 2 * i;
+            bool useStep1 = true;
+            while (index < s.size()) {
+                ans += s[index];
+                if (isMidRow) {
+                    index += useStep1 ? step1 : step2;
+                    useStep1 = !useStep1;
+                } else {
+                    index += cycle;
+                }
+            }
+        }
+        return ans;
+    }
+};
+
+/*
+134. 加油站
+在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。
+
+你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。
+
+给定两个整数数组 gas 和 cost ，如果你可以按顺序绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1 。如果存在解，则 保证 它是 唯一 的。
+
+贪心的思想有点绕：currentGas在站点 i处变为负数，说明从当前 start出发无法到达 i+1。此时，start到 i之间的任何站点都不能作为有效起点。
+*/
+class Solution134 {
+public:
+    int canCompleteCircuit(std::vector<int>& gas, std::vector<int>& cost) {
+        int totalGas = 0, currentGas = 0, start = 0;
+        for (int i = 0; i < gas.size(); ++i) {
+            int netGas = gas[i] - cost[i];
+            totalGas += netGas;
+            currentGas += netGas;
+            if (currentGas < 0) {
+                start = i + 1;
+                currentGas = 0;
+            }
+        }
+        return totalGas >= 0 ? start : -1;
+    }
+};
 
 
 int main() {
@@ -1421,5 +1467,32 @@ int main() {
 // class Solution {
 // public:
 //     std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs) {
+//     }
+// };
+
+// /*
+// 67. 二进制求和
+// 给你两个二进制字符串 a 和 b ，以二进制字符串的形式返回它们的和。
+// */
+// class Solution67 {
+// public:
+//     char addBinaryChar(char a, char b, bool &carry) {
+
+//         if (carry) {
+//         //    auto num = (std::fabs(a - b) + carry) % 2;
+//         }
+//         return ' ';
+//     }
+
+//     std::string addBinary(std::string a, std::string b) {
+//         std::string ans = a.size() > b.size() ? a : b;
+
+//         int pa = a.size() - 1, pb = b.size() - 1;
+//         bool carry = false;
+//         while (pa >= 0 && pb >= 0) {
+//             ans.push_back(addBinaryChar(a[pa], b[pb], carry));
+//         }
+//         std::reverse(ans.begin(), ans.end());
+//         return ans;
 //     }
 // };
