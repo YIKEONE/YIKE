@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <sstream>
 #include <random>
-
+#include <sys/epoll.h>
 /*
     已知的解体思路
     1. 快慢指针
@@ -71,7 +71,6 @@ private:
         {'M', 1000},
     };
 };
-
 
 /*
 27. 移除元素
@@ -1441,6 +1440,78 @@ public:
             }
         }
         return totalGas >= 0 ? start : -1;
+    }
+};
+
+/*
+209. 长度最小的子数组
+给定一个含有 n 个正整数的数组和一个正整数 target 。
+找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。
+如果不存在符合条件的子数组，返回 0 。
+
+示例 1：
+输入：target = 7, nums = [2,3,1,2,4,3]
+输出：2
+解释：子数组 [4,3] 是该条件下的长度最小的子数组。
+
+滑动窗口: 一直右滑，当满足条件时，左滑缩短条件
+*/
+class Solution209 {
+public:
+    int minSubArrayLen(int target, std::vector<int>& nums) {
+        int len = nums.size(), ans = len + 1, sum = 0, left = 0;
+        for (int right = 0; right < len; ++right) {
+            sum += nums[right];
+            while (sum >= target) {
+                ans = std::min(ans, right - left + 1);
+                sum -= nums[left];
+                ++left;
+            }
+        }
+        return ans > len ? 0 : ans;
+    }
+};
+
+/*
+3. 无重复字符的最长子串
+给定一个字符串 s ，请你找出其中不含有重复字符的 最长 子串 的长度。
+
+示例 1:
+
+输入: s = "abcabcbb"
+输出: 3
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+示例 2:
+
+输入: s = "bbbbb"
+输出: 1
+解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+*/
+class Solution3 {
+public:
+    int lengthOfLongestSubstring(std::string s) {
+        // int len = s.size(), ans = 0, left = 0;
+        // std::unordered_map<char, int> map;
+        // for (int right = 0; right < len; ++right) {
+        //     char c = s[right];
+        //     if (map.count(c) && map[c] >= left) {
+        //         left = map[c] + 1;
+        //     }
+        //     map[c] = right;
+        //     ans = std::max(ans, right - left + 1);
+        // }
+        // return ans;
+        int len = s.size(), ans = 0, left = 0;
+        std::unordered_set<char> set;
+        for (int right = 0; right < len; ++right) {
+            char ch = s[right];
+            while (set.count(ch)) {
+                set.erase(s[left++]);
+            }
+            ans = std::max(ans, right - left + 1);
+            set.emplace(ch);
+        }
+        return ans;
     }
 };
 
