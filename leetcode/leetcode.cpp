@@ -1515,6 +1515,46 @@ public:
     }
 };
 
+/*
+36. 有效的数独
+请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。
+
+数字 1-9 在每一行只能出现一次。
+数字 1-9 在每一列只能出现一次。
+数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。（请参考示例图）
+
+每一行、列、box每一个数都没有出现过， 当出现了row[i][curNum] == 1就代表curNum在之前已经出现过了
+*/
+class Solution36 {
+public:
+    bool isValidSudoku(std::vector<std::vector<char>>& board) {
+        int row[9][10] = { 0 };
+        int col[9][10] = { 0 };
+        int box[9][10] = { 0 };
+        for (int i = 0; i < 9; ++i) {
+            for (int j = 0; j < 9; ++j) {
+                if (board[i][j] == '.') {
+                    continue;
+                }
+                int curNum = board[i][j] - '0';
+                if (row[i][curNum]) {
+                    return false;
+                }
+                if (col[j][curNum]) {
+                    return false;
+                }
+                if (box[(i / 3) * 3 + (j / 3)][curNum]) {
+                    return false;
+                }
+                row[i][curNum] = 1;
+                col[j][curNum] = 1;
+                box[(i / 3) * 3 + j / 3][curNum] = 1;
+            }
+        }
+        return true;
+    }
+};
+
 
 int main() {
     Solution172 s;
