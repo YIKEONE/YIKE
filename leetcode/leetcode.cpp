@@ -1555,6 +1555,79 @@ public:
     }
 };
 
+/*
+54. 螺旋矩阵
+给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。
+*/
+class Solution54 {
+public:
+    std::vector<int> spiralOrder(std::vector<std::vector<int>>& matrix) {
+        int m = matrix.size(), n = matrix[0].size();
+        int left = 0, right = n - 1, top = 0, bottom = m - 1;
+        std::vector<int> ans;
+        while (left <= right && top <= bottom) {
+            // left -> right
+            for (int i = left; i <= right; ++i) {
+                ans.emplace_back(matrix[top][i]);
+            }
+            ++top;
+            // top -> bottom
+            for (int j = top; j <= bottom; ++j) {
+                ans.emplace_back(matrix[j][right]);
+            }
+            --right;
+            // right -> left
+            if (top <= bottom) {
+                for (int k = right; k >= left; --k) {
+                    ans.emplace_back(matrix[bottom][k]);
+                }
+            }
+            --bottom;
+            // bottom -> top
+            if (left <= right) {
+                for (int l = bottom; l >= top ; --l) {
+                    ans.emplace_back(matrix[l][left]);
+                }
+            }
+            ++left;
+        }
+        return ans;
+    }
+};
+
+/*
+73. 矩阵置零
+给定一个 m x n 的矩阵，如果一个元素为 0 ，则将其所在行和列的所有元素都设为 0 。请使用 原地 算法。
+*/
+class Solution73 {
+public:
+    void setZeroes(std::vector<std::vector<int>>& matrix) {
+        bool colZero = false;
+        int row = matrix.size(), col = matrix[0].size();
+        for (int i = 0; i < row; ++i) {
+            if (matrix[i][0] == 0) {
+                colZero = true;
+            }
+            for (int j = 1; j < col; ++j) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = matrix[0][j] = 0;
+                }
+            }
+        }
+        // 如果顺序遍历的话, 第一列的标志位会影响到后序, 所以要逆序遍历
+        for (int i = row - 1; i >= 0; --i) {
+            for (int j = col - 1; j > 0; --j) {
+                if (matrix[i][0] == 0 || matrix[0][j] == 0) {
+                    matrix[i][j] = 0;
+                }
+            }
+            if (colZero) {
+                matrix[i][0] = 0;
+            }
+        }
+    }
+};
+
 
 int main() {
     Solution172 s;
