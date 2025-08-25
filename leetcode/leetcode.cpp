@@ -1628,6 +1628,146 @@ public:
     }
 };
 
+/*
+48. 旋转图像
+给定一个 n × n 的二维矩阵 matrix 表示一个图像。请你将图像顺时针旋转 90 度。
+
+你必须在 原地 旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要 使用另一个矩阵来旋转图像。
+对于奇偶矩阵, 都是x = len / 2, y = (len + 1) / 2, 之间进行旋转, 之后算好坐标即可
+*/
+class Solution48 {
+public:
+    void rotate(std::vector<std::vector<int>>& matrix) {
+        int len = matrix.size();
+        for (int i = 0; i < len / 2; ++i) {
+            for (int j = 0; j < (len + 1) / 2; ++j) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[len - j - 1][i];
+                matrix[len - j - 1][i] = matrix[len - i - 1][len - j - 1];
+                matrix[len - i - 1][len - j - 1] = matrix[j][len - i - 1];
+                matrix[j][len - i - 1] = temp;
+            }
+        }
+    }
+};
+
+/*
+283. 移动零
+给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+
+请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+*/
+class Solution283 {
+public:
+    void moveZeroes(std::vector<int>& nums) {
+        for (int fast = 0, slow = 0; fast < nums.size(); ++fast) {
+            if (nums[fast] != 0) {
+                std::swap(nums[slow++], nums[fast]);
+            }
+        }
+    }
+};
+
+/*
+289. 生命游戏
+生命游戏 ，简称为 生命 ，是英国数学家约翰·何顿·康威在 1970 年发明的细胞自动机。
+
+给定一个包含 m × n 个格子的面板，每一个格子都可以看成是一个细胞。每个细胞都具有一个初始状态： 1 即为 活细胞 （live），或 0 即为 死细胞 （dead）。每个细胞与其八个相邻位置（水平，垂直，对角线）的细胞都遵循以下四条生存定律：
+
+如果活细胞周围八个位置的活细胞数少于两个，则该位置活细胞死亡；
+如果活细胞周围八个位置有两个或三个活细胞，则该位置活细胞仍然存活；
+如果活细胞周围八个位置有超过三个活细胞，则该位置活细胞死亡；
+如果死细胞周围正好有三个活细胞，则该位置死细胞复活；
+下一个状态是通过将上述规则同时应用于当前状态下的每个细胞所形成的，其中细胞的出生和死亡是 同时 发生的。给你 m x n 网格面板 board 的当前状态，返回下一个状态。
+
+给定当前 board 的状态，更新 board 到下一个状态。
+
+注意 你不需要返回任何东西。
+难: 0表示死，1表示生，10 表示原来死变生了，11 表示原来是生的现在还是生的，00 01同理
+*/
+class Solution289 {
+public:
+    void gameOfLife(std::vector<std::vector<int>>& board) {
+        int rows = board.size(), cols = board[0].size();
+        int dx[] = { -1, 1, 0, 0, -1, -1, 1, 1};
+        int dy[] = { 0, 0, -1, 1, -1, 1, -1, 1};
+        
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                int sum = 0;
+                for (int k = 0; k < 8; ++k) {
+                    int ni = i + dx[k];
+                    int nj = j + dy[k];
+                    if (ni >= 0 && ni < rows && nj >= 0 && nj < cols) {
+                        sum += (board[ni][nj] & 1);
+                    }
+                }
+                if (board[i][j] == 1) {
+                    if (sum == 2 || sum == 3) {
+                        board[i][j] |= 2;
+                    }
+                } else {
+                    if (sum == 3) {
+                        board[i][j] |= 2;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                board[i][j] >>= 1;
+            }
+        }
+    }
+};
+
+/*
+228. 汇总区间
+给定一个  无重复元素 的 有序 整数数组 nums 。
+
+区间 [a,b] 是从 a 到 b（包含）的所有整数的集合。
+
+返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表 。也就是说，nums 的每个元素都恰好被某个区间范围所覆盖，并且不存在属于某个区间但不属于 nums 的数字 x 。
+
+列表中的每个区间范围 [a,b] 应该按如下格式输出：
+
+"a->b" ，如果 a != b
+"a" ，如果 a == b
+
+示例 1：
+
+输入：nums = [0,1,2,4,5,7]
+输出：["0->2","4->5","7"]
+解释：区间范围是：
+[0,2] --> "0->2"
+[4,5] --> "4->5"
+[7,7] --> "7"
+
+题都看不明白, 才看明白...
+*/
+class Solution228 {
+public:
+    std::vector<std::string> summaryRanges(std::vector<int>& nums) {
+        std::vector<std::string> ans;
+        int len = nums.size(), low = 0, i = 0;
+        while (i < len) {
+            low = i;
+            ++i;
+            while (i < len && (nums[i - 1] + 1 == nums[i])) {
+                ++i;
+            }
+            int high = i - 1;
+            std::string temp = std::to_string(nums[low]);
+            if (low < high) {
+                temp.append("->");
+                temp.append(std::to_string(nums[high]));
+            }
+            ans.emplace_back(std::move(temp));
+        }
+        return ans;
+    }
+};
+
 
 int main() {
     Solution172 s;
