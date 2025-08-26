@@ -1768,6 +1768,89 @@ public:
     }
 };
 
+/*
+56. 合并区间
+以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。
+请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间 。
+*/
+class Solution56 {
+public:
+    std::vector<std::vector<int>> merge(std::vector<std::vector<int>>& intervals) {
+        std::vector<std::vector<int>> ans;
+        std::sort(intervals.begin(), intervals.end());
+        int i = 0, len = intervals.size();
+        while (i < len) {
+            auto currentStart = intervals[i][0];
+            auto currentEnd = intervals[i][1];
+            while (i + 1 < len && intervals[i + 1][0] <= currentEnd) {
+                ++i;
+                currentEnd = std::max(currentEnd, intervals[i][1]);
+            }
+            ans.push_back({currentStart, currentEnd});
+            ++i;
+        }
+        return ans;
+    }
+};
+
+/*
+57. 插入区间
+给你一个 无重叠的 ，按照区间起始端点排序的区间列表 intervals，其中 intervals[i] = [starti, endi] 表示第 i 个区间的开始和结束，
+并且 intervals 按照 starti 升序排列。同样给定一个区间 newInterval = [start, end] 表示另一个区间的开始和结束。
+
+在 intervals 中插入区间 newInterval，使得 intervals 依然按照 starti 升序排列，且区间之间不重叠（如果有必要的话，可以合并区间）。
+
+返回插入之后的 intervals。
+
+注意 你不需要原地修改 intervals。你可以创建一个新数组然后返回它。
+
+示例 1：
+
+输入：intervals = [[1,3],[6,9]], newInterval = [2,5]
+输出：[[1,5],[6,9]]
+*/
+class Solution57 {
+public:
+    std::vector<std::vector<int>> insert(std::vector<std::vector<int>>& intervals, std::vector<int>& newInterval) {
+        std::vector<std::vector<int>> ans;
+
+        return ans;
+    }
+};
+
+/*
+844. 比较含退格的字符串
+
+给定 s 和 t 两个字符串，当它们分别被输入到空白的文本编辑器后，如果两者相等，返回 true 。# 代表退格字符。
+
+注意：如果对空文本输入退格字符，文本继续为空。
+*/
+class Solution844 {
+public:
+    void backspace(std::string &str) {
+        for (auto it = str.begin(); it != str.end();) {
+            if (*it != '#') {
+                ++it;
+                continue;
+            }
+            if (it == str.begin()) {
+                it = str.erase(it);
+            } else {
+                --it;
+                it = str.erase(it);
+                it = str.erase(it);
+            }
+        }
+    }
+
+    bool backspaceCompare(std::string s, std::string t) {
+        backspace(s);
+        backspace(t);
+        return s == t;
+    }
+};
+
+
 
 int main() {
     Solution172 s;
