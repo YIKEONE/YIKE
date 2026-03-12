@@ -1,0 +1,6 @@
+[submodule "cppTrain"]
+	path = cppTrain
+	url = https://github.com/YIKEONE/cppTrain.git
+[submodule "library"]
+	path = library
+	url = https://github.com/YIKEONE/library.git
